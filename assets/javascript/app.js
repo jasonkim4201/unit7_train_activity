@@ -20,13 +20,36 @@ $(document).ready(function() {
     event.preventDefault();
 
     var trainData = {
-      name: $("#trainName").val().trim(),
+      trainName: $("#trainName").val().trim(),
       destination: $("#destination").val().trim(),
-      frequency: $("#trainTime").val().trim(),
-      nextArrival: w,
-      minAway: w
-
+      trainTime: $("#trainTime").val().trim(),
+      nextArrival: parseInt($("#frequency").val().trim())
     };
+    console.log(trainData);
+  
+  // add train info to firebase
+  database.ref("HW7").push(trainData);
 
-  })
-})
+  //clear boxes on submit
+  
+  $("#trainName").val("");
+  $("#destination").val("");
+  $("#trainTime").val("");
+  $("#frequency").val("");
+
+  });
+
+  //event listener for firebase for new train info
+  database.ref("HW7").on("child_added", function(childSnapshot) {
+    console.log(childSnapshot.val());
+    
+    var trainName = childSnapshot.val().trainName;
+    var destination = childSnapshot.val().destination;
+    var trainTime = childSnapshot.val().trainTime;
+    var nextArrival = childSnapshot.val().nextArrival;
+
+    console.log(childSnapshot.key);
+
+  });
+
+});
