@@ -1,0 +1,58 @@
+body {
+  background: url(../images/picture3.jpg);
+}
+.jumbotron {
+  position:relative;
+  background: url(../images/trainboard2.jpg);
+}
+
+#backgrounds {
+ position:relative; 
+ /*  height:281px;
+  width:450px; */
+  margin:0 auto;
+}
+
+#backgrounds img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes backgroundsFadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#backgrounds img.bg2 {
+animation-name: backgroundsFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 10s;
+animation-direction: alternate;
+}
+
+div#scheduleTrainCard {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+div#addTrainCard {
+ background-color: rgba(0, 0, 0, 0.25);
+}
+
+#submitBtn:hover  {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
