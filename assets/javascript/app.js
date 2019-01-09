@@ -46,10 +46,11 @@ $(document).ready(function() {
     var trainName = childSnapshot.val().trainName;
     var destination = childSnapshot.val().destination;
     var trainTime = childSnapshot.val().trainTime;
-    var nextArrival = childSnapshot.val().nextArrival;
+    var trainFrequency = childSnapshot.val().nextArrival;
 
     console.log(childSnapshot.key);
-  
+    
+    
 
 
   // add table row for train information
@@ -57,7 +58,7 @@ $(document).ready(function() {
   tableRow.attr("trainInfoKey", childSnapshot.key);
   tableRow.append("<td>" + trainName + "</td>");
   tableRow.append("<td>" + destination + "</td>");
-  tableRow.append("<td>" + trainTime + "</td>");
+  tableRow.append("<td>" + trainFrequency + "</td>");
   tableRow.append(`<td>~</td>`);
 
   $("tbody#trainInfo").append(tableRow);
