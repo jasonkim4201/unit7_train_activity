@@ -49,6 +49,18 @@ $(document).ready(function() {
     var nextArrival = childSnapshot.val().nextArrival;
 
     console.log(childSnapshot.key);
+  
+
+
+  // add table row for train information
+  var tableRow = $("<tr>");
+  tableRow.attr("trainInfoKey", childSnapshot.key);
+  tableRow.append("<td>" + trainName + "</td>");
+  tableRow.append("<td>" + destination + "</td>");
+  tableRow.append("<td>" + trainTime + "</td>");
+  tableRow.append(`<td>~</td>`);
+
+  $("tbody#trainInfo").append(tableRow);
 
   });
 
