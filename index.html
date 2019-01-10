@@ -64,23 +64,25 @@
 
           <!-- Entry Form -->
           <form class="entryForm">
-            <div class="form-group">
+            <div class="row">
+            <div class="form-group col-3">
               <label for="train-input" class="font-weight-bold">Train Name</label>
-              <input class="form-control border-dark" id="trainName" placeholder="TRAIN NAME" type="text">
+              <input class="form-control border-dark" id="trainName" placeholder="Train Name" type="text">
             </div>
-            <div class="form-group">
+            <div class="form-group col-3">
               <label for="destination-input" class="font-weight-bold">Destination</label>
               <input class="form-control border-dark" id="destination" placeholder="New York" type="text">
             </div>
-            <div class="form-group">
-              <label for="time-input" class="font-weight-bold">First Train Time</label>
-              <input class="form-control border-dark" id="trainTime" placeholder="1800" type="text">
-            </div>
-            <div class="form-group">
+            <div class="form-group col-3">
               <label for="frequency-input" class="font-weight-bold">Frequency(min)</label>
               <input class="form-control border-dark" id="frequency" placeholder="12" type="text">
             </div>
-            <button class="btn btn-primary float-right" id="submitBtn">Submit</button>
+            <div class="form-group col-3">
+              <label for="time-input" class="font-weight-bold">First Train Time</label>
+              <input class="form-control border-dark" id="trainTime" placeholder="1800" type="text">
+            </div>
+          </div>
+            <button class="btn btn-info btn-block float-right" id="submitBtn">Submit</button>
           </form>
 
         </div>
